@@ -1,0 +1,50 @@
+.team-finder {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-finder h2 {
+    color: #007bff;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.filters input,
+.filters select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.user-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.user-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.user-card p {
+    margin: 5px 0;
+    color: #555;
+}
