@@ -6,23 +6,26 @@ const Login = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const navigate = useNavigate();
 
+    const checkProfileAndNavigate = () => {
+        const profile = JSON.parse(localStorage.getItem('profile'));
+        if (profile) {
+            navigate('/dashboard');
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const checkProfileAndNavigate = () => {
-                const profile = JSON.parse(localStorage.getItem('profile'));
-                if (profile) {
-                    navigate('/dashboard');
-                }
-            };
+            checkProfileAndNavigate();
         } catch (error) {
             console.error('Login error:', error);
         }
     };
+
     useEffect(() => {
         checkProfileAndNavigate();
     }, []);
-
+    
     return (
         <div id="login">
             <form onSubmit={handleSubmit}>
